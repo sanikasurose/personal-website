@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function About() {
   return (
     <section id="about" className="scroll-mt-24 py-28">
@@ -8,7 +10,7 @@ export function About() {
         <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:gap-12">
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <Image
-              src="/about_me.png"
+              src={`${basePath}/about_me.png`}
               alt="About me"
               width={256}
               height={256}

@@ -8,6 +8,7 @@ const PHRASES = ["Hi! I'm", "Sanika Surose"];
 const TYPE_SPEED = 80;
 const DELETE_SPEED = 50;
 const PAUSE_AFTER_TYPE = 1200;
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function Hero() {
   const [displayed, setDisplayed] = useState("");
@@ -71,7 +72,7 @@ export function Hero() {
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 text-center">
         <div className="mx-auto flex max-w-3xl flex-col items-center">
           <Image
-            src="/profile.png"
+            src={`${basePath}/profile.png`}
             alt="Sanika Surose"
             width={288}
             height={288}
@@ -102,7 +103,7 @@ export function Hero() {
             style={{ animationDelay: "0.36s" }}
           >
             <a
-              href="/experience"
+              href={`${basePath}/experience`}
               className="w-48 rounded-lg bg-orb-dark px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-orb-dark focus:ring-offset-2 md:w-auto"
             >
               Experience

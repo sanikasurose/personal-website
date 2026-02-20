@@ -3,6 +3,9 @@
 import { useRef, useState, useCallback } from "react";
 import Grainient from "@/components/ui/Grainient";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const withBasePath = (path: string) => `${basePath}${path}`;
+
 type Project = {
   title: string;
   description: string;
@@ -18,7 +21,7 @@ const projects: Project[] = [
     description:
       "SeamSecure is a full-stack web application that analyzes email threads for potential security risks, combining rule-based heuristics with Google Gemini AI to detect phishing attempts, suspicious sender patterns, and other email-based threats.",
     tags: ["Python", "FastAPI", "Uvicorn", "Pydantic", "Google Gemini", "React", "TypeScript", "Tailwind CSS", "Vite"],
-    image: "/seamsecure.png",
+    image: withBasePath("/seamsecure.png"),
     href: "https://github.com/SeamSecure/SeamSecure",
     arrowColor: "text-pink-300",
   },
@@ -27,7 +30,7 @@ const projects: Project[] = [
     description:
       "CLAIRITY is a privacy-focused Swift iOS app that uses OCR and AI to transform complex medical, insurance, and institutional documents into clear, structured, and actionable next steps so patients know exactly what to do after a healthcare interaction.",
     tags: ["Swift", "Google Vision API", "Google Gemini", "Google Healthcare NLP"],
-    image: "/clairity.png",
+    image: withBasePath("/clairity.png"),
     href: "https://github.com/syaanmerchant/clAIrity",
   },
   {
@@ -35,7 +38,7 @@ const projects: Project[] = [
     description:
       "ScholarScrape is a Python-based web scraping tool that crawls university faculty pages and converts unstructured academic information into clean, structured research profiles in both human-readable and machine-readable formats for analysis and outreach.",
     tags: ["Python", "BeautifulSoup", "Schema Design", "JSON Output"],
-    image: "/scholarscrape.png",
+    image: withBasePath("/scholarscrape.png"),
     href: "https://github.com/sanikasurose/outreact-research-scraper",
   },
 ];
@@ -162,7 +165,7 @@ export function ProjectsSection() {
 
         <div className="mt-14 flex justify-center">
           <a
-            href="/experience"
+            href={`${basePath}/experience`}
             className="rounded-lg bg-orb-dark px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-orb-dark focus:ring-offset-2"
           >
             See all projects

@@ -1,20 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const withBasePath = (path: string) => `${basePath}${path}`;
+
 const technologies = [
-  { name: "Python", icon: "/logos/python.svg" },
-  { name: "Java", icon: "/logos/java.svg" },
-  { name: "JavaScript", icon: "/logos/javascript.svg" },
-  { name: "TypeScript", icon: "/logos/typescript.svg" },
-  { name: "C++", icon: "/logos/c.svg" },
-  { name: "HTML", icon: "/logos/html.svg" },
-  { name: "CSS", icon: "/logos/css.svg" },
-  { name: "Bash", icon: "/logos/bash.svg" },
-  { name: "NumPy", icon: "/logos/numpy.svg" },
-  { name: "PyTorch", icon: "/logos/pytorch.svg" },
-  { name: "React", icon: "/logos/react.svg" },
-  { name: "Tailwind CSS", icon: "/logos/tailwindcss.svg" },
-  { name: "FastAPI", icon: "/logos/fastapi.svg" },
-  { name: "GitHub", icon: "/logos/github.svg" },
+  { name: "Python", icon: withBasePath("/logos/python.svg") },
+  { name: "Java", icon: withBasePath("/logos/java.svg") },
+  { name: "JavaScript", icon: withBasePath("/logos/javascript.svg") },
+  { name: "TypeScript", icon: withBasePath("/logos/typescript.svg") },
+  { name: "C++", icon: withBasePath("/logos/c.svg") },
+  { name: "HTML", icon: withBasePath("/logos/html.svg") },
+  { name: "CSS", icon: withBasePath("/logos/css.svg") },
+  { name: "Bash", icon: withBasePath("/logos/bash.svg") },
+  { name: "NumPy", icon: withBasePath("/logos/numpy.svg") },
+  { name: "PyTorch", icon: withBasePath("/logos/pytorch.svg") },
+  { name: "React", icon: withBasePath("/logos/react.svg") },
+  { name: "Tailwind CSS", icon: withBasePath("/logos/tailwindcss.svg") },
+  { name: "FastAPI", icon: withBasePath("/logos/fastapi.svg") },
+  { name: "GitHub", icon: withBasePath("/logos/github.svg") },
 ];
 
 function TechItem({ name, icon }: { name: string; icon: string }) {
