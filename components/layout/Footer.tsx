@@ -13,7 +13,7 @@ export function Footer() {
             © {currentYear} Made by Sanika Surose 🌸
           </p>
           <a
-            href="https://github.com/sanikasurose/personal-portfolio-website"
+            href="https://github.com/sanikasurose/personal-website"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/60 transition hover:text-white"
