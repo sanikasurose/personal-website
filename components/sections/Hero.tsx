@@ -103,18 +103,10 @@ export function Hero() {
             style={{ animationDelay: "0.36s" }}
           >
             <a
-              href={`${basePath}/experience`}
+              href="#projects"
               className="w-48 rounded-lg bg-orb-dark px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-orb-dark focus:ring-offset-2 md:w-auto"
             >
-              Experience
-            </a>
-            <a
-              href="https://docs.google.com/document/d/1fk_DlDDKFr3G-Uh-M5MQ8cFGBw_8UFyiVjji7mI1iQs/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-48 rounded-lg border-2 border-gray-300 bg-white/80 px-5 py-2.5 text-center text-sm font-semibold text-gray-700 backdrop-blur-sm transition hover:border-gray-400 hover:bg-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 md:w-auto"
-            >
-              Resume
+              Projects
             </a>
           </div>
         </div>
